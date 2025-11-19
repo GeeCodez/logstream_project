@@ -15,7 +15,7 @@ class Command(BaseCommand):
 
         self.stdout.write(f"Starting to seed {TOTAL_LOGS} number of log enties in {BATCH_SIZE}...")
 
-        star_time=time.time()
+        start_time=time.time()
 
         logs_batch=[]
 
@@ -40,6 +40,6 @@ class Command(BaseCommand):
         end_time=time.time()
         self.stdout.write(
             self.style.SUCCESS(
-                f"Succesfully added {TOTAL_LOGS} in {end_time-star_time:.2f} seconds"
+                f"Succesfully added {TOTAL_LOGS} in {end_time-start_time:.2f} seconds"
             )
         )
